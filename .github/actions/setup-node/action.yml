@@ -1,0 +1,13 @@
+name: Setup Node
+description: "Reusable action to setup Node.js environment"
+inputs:
+  node-version:
+    description: "Version of Node.js to install"
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node-version }}
